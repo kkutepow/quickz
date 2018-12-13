@@ -29,29 +29,29 @@ body {
   border: dashed 2px red;
 }
 
-[red] {
-  background: red;
-}
+// [red] {
+//   background: red;
+// }
 
-[yellow] {
-  background: yellow;
-}
+// [pink] {
+//   background: pink;
+// }
 
-[pink] {
-  background: pink;
-}
+// [blue] {
+//   background: lightskyblue;
+// }
 
-[blue] {
-  background: lightskyblue;
-}
+// [yellow] {
+//   background: yellow;
+// }
 
-[green] {
-  background: yellowgreen;
-}
+// [green] {
+//   background: yellowgreen;
+// }
 
-[orange] {
-  background: orange;
-}
+// [orange] {
+//   background: orange;
+// }
 
 .container {
   max-width: 990px;
@@ -64,4 +64,8 @@ body {
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.center-align {
+  text-align: center;
 }
