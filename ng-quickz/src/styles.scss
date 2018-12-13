@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+[debug] {
+  border: dashed 2px red;
+}
+
+[red] {
+  background: red;
+}
+
+[yellow] {
+  background: yellow;
+}
+
+[pink] {
+  background: pink;
+}
+
+[blue] {
+  background: lightskyblue;
+}
+
+[green] {
+  background: yellowgreen;
+}
+
+[orange] {
+  background: orange;
+}
+
+.container {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 20pt 10pt 10pt 10pt;
+}
+
+.valign {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
