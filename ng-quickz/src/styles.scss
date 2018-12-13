@@ -69,3 +69,36 @@ body {
 .center-align {
   text-align: center;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.faded-in {
+  position: relative;
+  overflow: hidden;
+
+  -webkit-animation: 1.5s fadeIn ease-in-out;
+  -moz-animation: 1.5s fadeIn ease-in-out;
+  -ms-animation: 1.5s fadeIn ease-in-out;
+  -o-animation: 1.5s fadeIn ease-in-out;
+  animation: 1.5s fadeIn ease-in-out;
+}
