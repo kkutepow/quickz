@@ -8,6 +8,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { QuestionControlsComponent } from './components/question-controls/question-controls.component';
+import { QuizTrackerComponent } from './components/quiz-tracker/quiz-tracker.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { QuestionControlsComponent } from './components/question-controls/questi
     HeaderComponent,
     FooterComponent,
     QuestionControlsComponent,
+    QuizTrackerComponent,
   ],
   imports: [BrowserModule],
   providers: [],
