@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+input[type=checkbox]:checked+label>input[type=text],
+input[type=radio]:checked+label>input[type=text]  {
+  display: block;
+}
+
+input[type=checkbox]+label>input[type=text],
+input[type=radio]+label>input[type=text] {
+  display: none;
+  margin-top: 5pt;
+  outline: none;
+  border-width: 0;
+  border-bottom: 3px solid $accent-color;
+  padding: 3pt 6pt;
+  font-size: 14pt;
+  font-weight: 600;
+  text-align: center;
+}

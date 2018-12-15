@@ -1,7 +1,6 @@
 @import "../../../variables.scss";
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type='checkbox'] {
   visibility: hidden;
 }
 
@@ -24,6 +23,7 @@ input[type='checkbox']+label {
     border: 3px solid $default-color;
     border-radius: 6px;
     left: 0;
+    transition: .3s;
   }
 
   span.checkbox-icon:after,
@@ -63,16 +63,18 @@ input[type='checkbox']+label:active {
 input[type='checkbox']+label:active,
 input[type='checkbox']:checked+label {
   color: $accent-color;
+  &:before {
+  }
 
   span.checkbox-icon:before {
     width: 13pt;
-    transform: translate(1pt, 5pt) rotate(45deg);
+    transform: translate(0pt, 5pt) rotate(45deg);
     transition: .1s ease-out;
   }
 
   span.checkbox-icon::after {
-    width: 22pt;
-    transform: translate(6.2pt, 14.2pt) rotate(-45deg);
+    width: 23pt;
+    transform: translate(5.2pt, 14.2pt) rotate(-45deg);
     transition-delay: unset;
     transition: .1s ease-out .08s;
   }

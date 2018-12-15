@@ -1,0 +1,84 @@
+@import "../../../variables.scss";
+
+input[type='radio'] {
+  visibility: hidden;
+}
+
+input[type='radio']+label {
+  color: $default-color;
+  font-weight: bold;
+  display: block;
+  text-align: left !important;
+  padding-left: 25pt;
+  font-size: 18pt;
+  line-height: 20pt;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 15pt;
+    height: 15pt;
+    line-height: 15pt;
+    border: 3px solid $default-color;
+    border-radius: 50%;
+    left: 0;
+    transition: .3s;
+  }
+
+  span.radio-icon:before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 15pt;
+    height: 15pt;
+    border: 3px solid $accent-color;
+    background: $accent-color;
+    left: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0);
+  }
+
+  span.radio-icon:before {
+    transition: .1s ease-out;
+  }
+}
+
+input[type='radio']+label:active,
+input[type='radio']:checked+label {
+  color: $accent-color;
+
+  &:before {}
+
+  span.radio-icon:before {
+    transform: scale(1);
+    transition: .1s ease-out;
+  }
+}
+
+
+input[type='radio'][disabled]+label {
+  color: $disabled-color;
+
+  span.radio-icon::after,
+  span.radio-icon:before {
+    background-color: #c8c8c8;
+    border-color: #c8c8c8;
+  }
+
+  &:before {
+    border-color: $disabled-color;
+  }
+}
+
+input[type='radio'][disabled]+label {
+  span.radio-icon:before {
+    transform: scale(1);
+  }
+}
+
+input[type='radio'][disabled]:not(:checked)+label {
+  span.radio-icon:before {
+    transform: scale(0);
+  }
+}
