@@ -21,6 +21,14 @@ body {
 
 }
 
+.full-h {
+  height: 100%;
+}
+
+.full-w {
+  width: 100%;
+}
+
 .bold {
   font-weight: bolder;
 }
@@ -37,29 +45,29 @@ body {
   border: dashed 2px red;
 }
 
-// [red] {
-//   background: red;
-// }
+[red] {
+  background: red;
+}
 
-// [pink] {
-//   background: pink;
-// }
+[pink] {
+  background: pink;
+}
 
-// [blue] {
-//   background: lightskyblue;
-// }
+[blue] {
+  background: lightskyblue;
+}
 
-// [yellow] {
-//   background: yellow;
-// }
+[yellow] {
+  background: yellow;
+}
 
-// [green] {
-//   background: yellowgreen;
-// }
+[green] {
+  background: yellowgreen;
+}
 
-// [orange] {
-//   background: orange;
-// }
+[orange] {
+  background: orange;
+}
 
 .container {
   max-width: 990px;
@@ -70,8 +78,10 @@ body {
 .valign {
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .center-align {

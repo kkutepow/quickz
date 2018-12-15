@@ -1,0 +1,101 @@
+@import "../../../variables.scss";
+
+input[type='checkbox'],
+input[type='radio'] {
+  visibility: hidden;
+}
+
+input[type='checkbox']+label {
+  color: $default-color;
+  font-weight: bold;
+  display: block;
+  text-align: left !important;
+  padding-left: 25pt;
+  font-size: 18pt;
+  line-height: 20pt;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 15pt;
+    height: 15pt;
+    line-height: 15pt;
+    border: 3px solid $default-color;
+    border-radius: 6px;
+    left: 0;
+  }
+
+  span.checkbox-icon:after,
+  span.checkbox-icon:before {
+    content: '';
+    position: absolute;
+    height: 3pt;
+    background: $accent-color;
+    left: 0;
+    transform-origin: 0 0;
+  }
+
+  span.checkbox-icon:before {
+    width: 0;
+    transform: translate(1pt, 5pt) rotate(45deg);
+    transition: .1s ease-out .08s;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  span.checkbox-icon::after {
+    width: 0;
+    transform: translate(6.2pt, 14.2pt) rotate(-45deg);
+    transition: .1s ease-out;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+}
+
+input[type='checkbox']+label:active {
+  &:before {
+    border-color: #434;
+    border-radius: 7px;
+  }
+}
+
+input[type='checkbox']+label:active,
+input[type='checkbox']:checked+label {
+  color: $accent-color;
+
+  span.checkbox-icon:before {
+    width: 13pt;
+    transform: translate(1pt, 5pt) rotate(45deg);
+    transition: .1s ease-out;
+  }
+
+  span.checkbox-icon::after {
+    width: 22pt;
+    transform: translate(6.2pt, 14.2pt) rotate(-45deg);
+    transition-delay: unset;
+    transition: .1s ease-out .08s;
+  }
+}
+
+
+input[type='checkbox'][disabled]+label {
+  color: $disabled-color;
+
+  span.checkbox-icon::after,
+  span.checkbox-icon:before {
+    background-color: #c8c8c8;
+  }
+
+  &:before {
+    border-color: $disabled-color;
+  }
+}
+
+input[type='checkbox'][disabled]:not(:checked)+label {
+
+  span.checkbox-icon:before,
+  span.checkbox-icon::after {
+    width: 0;
+  }
+}
