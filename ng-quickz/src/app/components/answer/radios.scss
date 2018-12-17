@@ -6,13 +6,13 @@ input[type='radio'] {
 
 input[type='radio']+label {
   color: $default-color;
-  font-weight: bold;
   display: block;
   text-align: left !important;
   padding-left: 25pt;
   font-size: 18pt;
   line-height: 20pt;
   position: relative;
+  font-weight: 100;
 
   &:before {
     content: '';
@@ -20,7 +20,7 @@ input[type='radio']+label {
     width: 15pt;
     height: 15pt;
     line-height: 15pt;
-    border: 3px solid $default-color;
+    border: 1px solid $default-color;
     border-radius: 50%;
     left: 0;
     transition: .3s;
@@ -32,7 +32,8 @@ input[type='radio']+label {
     border-radius: 50%;
     width: 15pt;
     height: 15pt;
-    border: 3px solid $accent-color;
+    padding: 1px;
+    border: 1px solid $accent-color;
     background: $accent-color;
     left: 0;
     transform-origin: 50% 50%;
@@ -47,10 +48,12 @@ input[type='radio']+label {
 input[type='radio']+label:active,
 input[type='radio']:checked+label {
   color: $accent-color;
+  font-weight: bold;
 
   &:before {}
 
   span.radio-icon:before {
+    padding: 1px;
     transform: scale(1);
     transition: .1s ease-out;
   }
