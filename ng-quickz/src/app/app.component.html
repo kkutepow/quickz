@@ -1,21 +1,60 @@
-<div class="root-container">
-  <div  class="top">
-    <!-- <app-header></app-header> -->
+
+<!-- Step Form -->
+<div *ngIf="false" class="root-container">
+  <div class="top">
+    <app-header></app-header>
     <div class="container">
       <app-question></app-question>
     </div>
   </div>
-
-  <div  class="middle" >
-    <div class="container valign center-align" >
+  <div class="middle">
+    <div class="container valign center-align">
       <app-answer></app-answer>
     </div>
   </div>
-
-  <div  class="bottom">
-    <!-- <app-footer></app-footer> -->
+  <div class="bottom">
     <div class="container">
       <app-question-controls></app-question-controls>
     </div>
+    <app-footer></app-footer>
   </div>
 </div>
+
+<!-- Introduce -->
+<div *ngIf="true" class="root-container">
+  <div class="top container">
+    B
+  </div>
+  <div class="middle full-h">
+    <div class="container valign center-align">
+        <app-answer></app-answer>
+    </div>
+  </div>
+  <div class="bottom container">
+    <div class="container">
+      A
+    </div>
+  </div>
+</div>
+
+
+<!-- Introduction -->
+<div *ngIf="false" class="root-container">
+    <div class="top">
+      <app-header></app-header>
+      <div class="container">
+        <app-question></app-question>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="container valign center-align">
+        <app-answer></app-answer>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="container">
+        <app-question-controls></app-question-controls>
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </div>
