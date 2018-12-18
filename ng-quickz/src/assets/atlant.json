@@ -1,0 +1,47 @@
+{
+  "globalConfig": {},
+  "globalContent": {},
+  "sections": [{
+      "type": "intro",
+      "header": "Hey you",
+      "subHeader": "Here you can get the information you need and help us to navigate you in your request",
+      "paragraphs": [
+        "para1",
+        "para2",
+        "para3"
+      ],
+      "startButton": {
+        "label": "Let's GO",
+        "goalName": "StartButtonClicked"
+      }
+    }, {
+      "type": "question",
+      "operation": "sum",
+      "question": [
+        "Para1",
+        "Para2"
+      ],
+      "answers": [{
+        "id": "Hunk",
+        "type": "checkbox",
+        "name": "area",
+        "value": "1",
+        "checked": false,
+        "disabled": false,
+        "points": 100
+      }, {
+        "id": "Hunk",
+        "type": "checkbox",
+        "name": "area",
+        "value": "1",
+        "checked": false,
+        "disabled": false,
+        "points": 100
+      }]
+    },
+    {
+      "type": "contacts",
+      "data": ""
+    }
+  ]
+}

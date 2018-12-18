@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { QuestionControlsComponent } from './components/question-controls/question-controls.component';
 import { QuizTrackerComponent } from './components/quiz-tracker/quiz-tracker.component';
+import { JSONService } from './services/json.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,8 @@ import { QuizTrackerComponent } from './components/quiz-tracker/quiz-tracker.com
     QuestionControlsComponent,
     QuizTrackerComponent,
   ],
-  imports: [BrowserModule],
-  providers: [],
+  imports: [BrowserModule, HttpClientModule],
+  providers: [JSONService, HttpClient],
   bootstrap: [AppComponent],
   entryComponents: [
     QuestionComponent,
