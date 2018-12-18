@@ -47,6 +47,18 @@ body {
   font-weight: 100;
 }
 
+.center-align {
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
 [debug] {
   border: dashed 2px red;
 }
@@ -100,8 +112,17 @@ body {
   }
 }
 
-.center-align {
-  text-align: center;
+.welcome-button {
+  background: transparent;
+  border: solid thin #4d4e4d;
+  border-radius: 4px;
+  padding: 8px 24px;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  outline: none;
+  // background: linear-gradient(15deg, #dfdfdf, #fff, #fff, #fff, #fff, #dfdfdf);
+  transform: scale(1.5);
 }
 
 /* Safari 4.0 - 8.0 */

@@ -23,8 +23,8 @@ import { QuizTrackerComponent } from './components/quiz-tracker/quiz-tracker.com
   ],
   imports: [BrowserModule],
   providers: [],
-  bootstrap: [
-    AppComponent,
+  bootstrap: [AppComponent],
+  entryComponents: [
     QuestionComponent,
     AnswerComponent,
     QuizComponent,
