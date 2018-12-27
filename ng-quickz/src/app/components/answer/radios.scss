@@ -4,15 +4,20 @@ input[type='radio'] {
   visibility: hidden;
 }
 
-input[type='radio']+label {
+// <label>
+// <input type="radio" formControlName="name" value="Stepan"> Stephan
+// </label>
+
+label {
   color: $default-color;
   display: block;
   text-align: left !important;
-  padding-left: 25pt;
+  padding-left: 15pt;
   font-size: 18pt;
   line-height: 20pt;
   position: relative;
   font-weight: 100;
+  margin-bottom: 9pt;
 
   &:before {
     content: '';
@@ -25,6 +30,10 @@ input[type='radio']+label {
     left: 0;
     transition: .3s;
   }
+  span.label {
+    display: inline-block;
+    max-width: calc(100% - 20pt);
+  }
 
   span.radio-icon:before {
     content: '';
@@ -32,7 +41,6 @@ input[type='radio']+label {
     border-radius: 50%;
     width: 15pt;
     height: 15pt;
-    padding: 1px;
     border: 1px solid $accent-color;
     background: $accent-color;
     left: 0;
@@ -45,43 +53,14 @@ input[type='radio']+label {
   }
 }
 
-input[type='radio']+label:active,
-input[type='radio']:checked+label {
+label.checked {
   color: $accent-color;
   font-weight: bold;
 
   &:before {}
 
   span.radio-icon:before {
-    padding: 1px;
     transform: scale(1);
     transition: .1s ease-out;
-  }
-}
-
-
-input[type='radio'][disabled]+label {
-  color: $disabled-color;
-
-  span.radio-icon::after,
-  span.radio-icon:before {
-    background-color: #c8c8c8;
-    border-color: #c8c8c8;
-  }
-
-  &:before {
-    border-color: $disabled-color;
-  }
-}
-
-input[type='radio'][disabled]+label {
-  span.radio-icon:before {
-    transform: scale(1);
-  }
-}
-
-input[type='radio'][disabled]:not(:checked)+label {
-  span.radio-icon:before {
-    transform: scale(0);
   }
 }
